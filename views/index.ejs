@@ -1,0 +1,293 @@
+<% // toolbar %>
+
+
+<div class="toolbar" role="banner">
+    <img
+      width="40"
+      alt="Angular Logo"
+      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDUyLjFMMTYuOCAxODIuNmgxMi43bDExLjctMjkuMmg0OS40bDExLjcgMjkuMkgxODNMMTI1IDUyLjF6bTE3IDgzLjNoLTM0bDE3LTQwLjkgMTcgNDAuOXoiIC8+CiAgPC9zdmc+Cg=="
+    />
+    <span>Welcome! Be Productive.</span>
+  
+    <nav class="btn1">
+      <!-- Call the redirectToLogin() method when the login button is clicked -->
+      <a id="loginBtn" href="login">Login</a>
+    </nav>
+    
+  </div>
+
+<style>
+    .toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 10px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  border-radius: 0px 0px 18px 18px;
+
+  /* Animation */
+  background-color: #b507ff;
+  animation: toolbarColors 10s infinite;
+}
+
+@keyframes toolbarColors {
+  0%, 100% {
+    background-color: #b507ff; /* Start and end with color #b507ff */
+  }
+  25% {
+    background-color: #ff3860; /* Transition to color #ff3860 at 25% of the animation */
+  }
+  50% {
+    background-color: #fffd00; /* Transition to color #fffd00 at 50% of the animation */
+  }
+  75% {
+    background-color: #f47c0b; /* Transition to color #27ae60 at 75% of the animation */
+  }
+}
+
+  
+.btn1 a {
+    background-color: #ffd901bc;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+.btn1 a:hover {
+  background-color: #ffea06;
+}
+
+.btn1 {
+  margin-left: auto;
+}
+</style>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="midtext.component.css">
+</head>
+<body>
+  <div class="center-container">
+    <h1 class="animated-text">Elevate Your Productivity Journey Today</h1>
+    <h4 class="animated-text1">Join us today</h4>
+  </div>
+  
+ 
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+<style>
+    body, html {
+    background-color: black;
+    height: 100%;
+    margin: 0;
+    color: rgb(255, 255, 255);
+  }
+  
+  .center-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 0px;
+  }
+  
+  .animated-text {
+    font-size: 48px;
+    font-weight: bold;
+    animation: snakeAround 4s infinite linear;
+    border: 12px solid transparent; /* To create initial border width */
+  }
+  
+  .animated-text1 {
+    font-size: 24px;
+    animation: snakeAround 4s infinite linear reverse; /* Reverse the animation for a different duration */
+    border: 12px solid transparent;
+  }
+  
+  @keyframes snakeAround {
+    0% {
+      border-left-color: transparent;
+      border-right-color: transparent;
+      border-top-color: #b507ff; /* Snake starts moving from top border */
+      border-bottom-color: transparent;
+    }
+    25% {
+      border-left-color: transparent;
+      border-right-color: #b507ff; /* Snake moves to right border */
+      border-top-color: transparent;
+      border-bottom-color: transparent;
+    }
+    50% {
+      border-left-color: transparent;
+      border-right-color: transparent;
+      border-top-color: transparent;
+      border-bottom-color: #b507ff; /* Snake moves to bottom border */
+    }
+    75% {
+      border-left-color: #b507ff; /* Snake moves to left border */
+      border-right-color: transparent;
+      border-top-color: transparent;
+      border-bottom-color: transparent;
+    }
+    100% {
+      border-left-color: transparent;
+      border-right-color: transparent;
+      border-top-color: transparent;
+      border-bottom-color: transparent;
+    }
+  }
+  
+</style>
+
+<div class="features-container">
+    <div class="feature-item">
+      <i class="fas fa-check"></i>
+      <h3>Task Management</h3>
+      <p>Easily create, organize, and manage tasks with a user-friendly interface.</p>
+    </div>
+  
+    <div class="feature-item">
+      <i class="fas fa-check"></i>
+      <h3>Priority Levels</h3>
+      <p>Assign priority levels to tasks to focus on what matters most.</p>
+    </div>
+  
+    <div class="feature-item">
+      <i class="fas fa-check"></i>
+      <h3>Due Dates and Reminders</h3>
+      <p>Set due dates and receive reminders to stay on track with deadlines.</p>
+    </div>
+
+    <div class="feature-item">
+        <i class="fas fa-check"></i>
+        <h3>Categories and Tags</h3>
+        <p> Categorize tasks using tags to maintain a structured workflow.</p>
+    </div>
+
+    <div class="feature-item">
+        <i class="fas fa-check"></i>
+        <h3>Task Sorting and Filtering</h3>
+        <p>Sort and filter tasks based on priority, due date, or completion status.</p>
+    </div>
+
+    <div class="feature-item">
+        <i class="fas fa-check"></i>
+        <h3>Recurring Tasks</h3>
+        <p>Automate repetitive tasks by setting them as recurring at specified intervals.</p>
+    </div>
+
+    <div class="feature-item">
+        <i class="fas fa-check"></i>
+        <h3>Subtasks</h3>
+        <p>Break complex tasks into smaller subtasks for better organization and progress tracking.</p>
+    </div>
+  
+    <!-- Add other features and benefits here -->
+    
+  </div>
+  
+<style>
+    .features-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the container horizontally */
+    margin-top: 20px; /* Add a top margin for spacing */
+    margin-bottom: 20px; /* Add a bottom margin for spacing */
+    flex-wrap: wrap; /* Wrap the feature items for responsiveness */
+  }
+  
+  .feature-item {
+    flex: 1 0 calc(33.33% - 20px); /* Set a fixed width for each feature-item */
+    text-align: center;
+    padding: 20px;
+    background-color: #111111;
+    border-radius: 10px;
+    color: #ffffff;
+    margin: 0 10px 20px; /* Add some spacing between feature items */
+  }
+  
+  .feature-item i {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .feature-item h3 {
+    font-size: 20px;
+  }
+  
+  .feature-item p {
+    font-size: 16px;
+  }
+  
+  /* Media Query for responsiveness */
+  @media (max-width: 768px) {
+    .feature-item {
+      flex: 1 0 calc(50% - 20px); /* Set two columns on smaller screens */
+    }
+  }
+  
+</style>
+
+<footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="your-logo.png" alt="Logo">
+      </div>
+      <div class="footer-links">
+        <a href="#">Home</a>
+        <a href="about">About</a>
+        <a href="contact">Services</a>
+        <a href="contact">Contact</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 Mellouni. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  <style>
+    .footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-logo img {
+    width: 100px;
+    height: auto;
+  }
+  
+  .footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 20px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: 10px;
+  }
+  
+  </style>

@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>TaskMaster Register</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="login.component.css">
+
+</head>
+<body>
+  <div class="wrapper">
+    <form action="/register" method="post">
+      <h1>Register</h1>
+      <div class="input-box">
+        <input type="text" [(ngModel)]="name" name="name" placeholder="Name" required>
+      </div>
+      <div class="input-box">
+        <input type="email" [(ngModel)]="email" name="email" placeholder="Email" required>
+      </div>
+      <div class="input-box">
+        <input type="password" [(ngModel)]="password" name="password" placeholder="Password" required>
+      </div>
+      <div class="input-box">
+        <button type="submit" id="loginBtn">Register</button>
+      </div>
+      <div>
+        <button (click)="resetPassword()" id="resetBtn">Forgot Password ?</button>
+      </div>
+    </form>
+  </div>
+
+  <div id="loginSection"></div>
+</body>
+</html>
+
+<style>
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #111111;
+  color: #ffffff;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding-right: 10px; /* Add padding to increase space on the right side */
+}
+
+form {
+  background-color: #222222;
+  border-radius: 10px;
+  padding: 20px;
+  width: 320px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-box {
+  margin-bottom: 20px;
+  margin-right: 20px;
+  text-align: center; /* Center the login button */
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #444444;
+  color: #ffffff;
+}
+
+button {
+  width: 106.8%; /* Set the width to 100% to make the button fill the input-box */
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #b507ff;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ffea06;
+}
+
+#resetBtn {
+  width: 100%; /* Set the width to 100% to make the button fill the input-box */
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #444444;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#resetBtn:hover {
+  background-color: #ffea06;
+}
+</style>
